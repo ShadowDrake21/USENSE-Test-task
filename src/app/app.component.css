@@ -67,7 +67,30 @@
 }
 
 .password__indicators-section {
-  border: 1px solid #000;
   width: 25%;
   height: 20px;
+
+  border: 1px solid gray;
+  background-color: rgb(187, 187, 187);
+}
+
+.password__indicators.short .password__indicators-section {
+  border: 1px solid red;
+  background-color: red;
+}
+
+.password__indicators.easy .password__indicators-section:first-child {
+  border: 1px solid red;
+  background-color: red;
+}
+
+.password__indicators.medium:not(.short)
+  .password__indicators-section:nth-child(-n + 2) {
+  border: 1px solid yellow;
+  background-color: yellow;
+}
+
+.password__indicators.strong:not(.short) .password__indicators-section {
+  border: 1px solid green;
+  background-color: green;
 }

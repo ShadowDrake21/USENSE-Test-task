@@ -1,7 +1,7 @@
 <section class="section password">
   <div class="container password__inner">
     <h1 class="password__title">
-      Password strength application by Dmytro
+      Password strength tester app by Dmytro
       <a
         href="https://github.com/ShadowDrake21"
         target="_blank"
@@ -20,10 +20,20 @@
     </div>
     <div class="password__info">
       <div class="password__strength">
+        @if (passwordField.errors?.['minlength'] && passwordField.value?.length!
+        > 0) {
+        <span class="password__strength-title"
+          >Password is too short (less than 8 characters)</span
+        >
+        } @else {
         <span class="password__strength-title">Password strength:</span>
-        <span class="password__strength-result">Easy</span>
+        <span class="password__strength-result">{{ passwordStrength }}</span>
+        }
       </div>
-      <ul class="password__indicators">
+      <ul
+        class="password__indicators"
+        [ngClass]="{  short: passwordField.errors?.['minlength'] && passwordField.value?.length! > 0, easy: passwordStrength === 'easy', medium: passwordStrength === 'medium', strong: passwordStrength === 'strong'}"
+      >
         <li class="password__indicators-section"></li>
         <li class="password__indicators-section"></li>
         <li class="password__indicators-section"></li>

@@ -1,0 +1,73 @@
+.section {
+  height: 100vh;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 750px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.password__inner {
+}
+
+.password__title {
+}
+
+.password__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.password__item-label {
+  padding-bottom: 5px;
+}
+
+.password__item-label {
+}
+
+.password__item-input {
+  padding: 5px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.password__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.password__strength {
+  display: flex;
+  gap: 10px;
+}
+
+.password__strength-title {
+  display: block;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+.password__strength-result {
+}
+
+.password__indicators {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password__indicators-section {
+  border: 1px solid #000;
+  width: 25%;
+  height: 20px;
+}
